@@ -3,9 +3,74 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="style.css" />
         <title>Audio Player</title>
+        <link
+            rel="shortcut icon"
+            href="./assets/svg/icons8-musical-notes-32.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="style.css" />
     </head>
-    <body></body>
+    <body>
+        <div class="player-container">
+            <img
+                class="background"
+                src="./assets/img/Imagine Dragons - Bones_background.jpg"
+                alt="background image"
+            />
+            <audio
+                class="audio"
+                src="./assets/audio/Imagine Dragons - Bones.mp3"
+            ></audio>
+            <div class="player">
+                <div class="cover">
+                    <img
+                        class="cover-img"
+                        src="./assets/img/Imagine Dragons - Bones 500x500.jpg"
+                        alt="cover"
+                    />
+                </div>
+                <div class="title">Imagine Dragons</div>
+                <div class="track">Bones</div>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+                <div class="buttons">
+                    <div class="btn prev">
+                        <img src="./assets/svg/icons8-prev-64.png" alt="" />
+                    </div>
+                    <div class="btn play">
+                        <img
+                            class="img__src"
+                            src="./assets/svg/icons8-play-64.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="btn next">
+                        <img src="./assets/svg/icons8-next-64.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-container">
+                    <a href="https://github.com/valeriastav" target="_blank"
+                        ><img
+                            src="./assets/svg/github-55.png"
+                            alt="github"
+                            width="40"
+                    /></a>
+                    <div>© 2023</div>
+                    <a href="https://rs.school/js/" target="_blank"
+                        ><img
+                            src="./assets/svg/rs_school_js.svg"
+                            alt="RS School"
+                            width="60"
+                    /></a>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
 </html>
