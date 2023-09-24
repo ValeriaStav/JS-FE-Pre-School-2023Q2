@@ -9,30 +9,28 @@
             href="./assets/svg/icons8-musical-notes-32.png"
             type="image/x-icon"
         />
-        <link rel="stylesheet" href="normalize.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="player-container">
+        <div class="player-wrapper">
             <img
                 class="background"
-                src="./assets/img/Imagine Dragons - Bones_background.jpg"
+                src="./assets/img/background1.jpg"
                 alt="background image"
             />
-            <audio
-                class="audio"
-                src="./assets/audio/Imagine Dragons - Bones.mp3"
-            ></audio>
+            <audio class="audio" src="./assets/audio/Bones.mp3"></audio>
             <div class="player">
-                <div class="cover">
-                    <img
-                        class="cover-img"
-                        src="./assets/img/Imagine Dragons - Bones 500x500.jpg"
-                        alt="cover"
-                    />
-                </div>
+                <img
+                    class="cover-img"
+                    src="./assets/img/cover1.jpg"
+                    alt="cover"
+                />
                 <div class="title">Imagine Dragons</div>
                 <div class="track">Bones</div>
+                <div class="time-container">
+                    <div class="currentTime">00:00</div>
+                    <div class="durationTime">02:45</div>
+                </div>
                 <div class="progress-container">
                     <div class="progress"></div>
                 </div>
@@ -42,7 +40,7 @@
                     </div>
                     <div class="btn play">
                         <img
-                            class="img__src"
+                            class="img-src"
                             src="./assets/svg/icons8-play-64.png"
                             alt=""
                         />
