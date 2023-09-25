@@ -41,7 +41,6 @@ function playTrack() {
     background.src = `assets/img/background${trackIndex + 1}.jpg`;
     cover.src = `./assets/img/cover${trackIndex + 1}.jpg`;
     imgSrc.src = `./assets/svg/icons8-pause-64.png`;
-    audio.currentTime = 0;
     audio.play();
 }
 
