@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link
+            rel="shortcut icon"
+            href="assets/favicon.ico"
+            type="image/x-icon"
+        />
         <link rel="stylesheet" href="style.css" />
         <script
             src="https://kit.fontawesome.com/625da22935.js"
@@ -14,46 +18,57 @@
     <body>
         <header class="header">
             <div class="header-container">
-                <h1>
-                    <i class="fa-solid fa-camera-retro" style="color: gold"></i>
-                    Unsplash API
-                </h1>
+                <div class="header-title">
+                    <h1>
+                        <i
+                            class="fa-solid fa-camera-retro"
+                            style="color: gold"
+                        ></i>
+                        Unsplash API
+                    </h1>
+                </div>
                 <div class="search-container">
                     <input
-                        type="text"
+                        class="search-box"
+                        type="search"
                         name="search-box"
                         id="search-box"
                         placeholder="Search..."
+                        autofocus
                     />
                     <i
                         class="fa-solid fa-magnifying-glass"
-                        style="color: gold"
+                        style="color: #3b3d3e"
                     ></i>
                 </div>
             </div>
         </header>
         <main class="main">
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
+            <div class="image-container">
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+                <div class="gallery-img"></div>
+            </div>
         </main>
         <footer class="footer">
-            <a href="https://github.com/valeriastav" target="_blank"
-                ><img src="./assets/svg/github-55.png" alt="github" width="40"
-            /></a>
-            <div>© 2023</div>
-            <a href="https://rs.school/js/" target="_blank"
-                ><img
-                    src="./assets/svg/rs_school_js.svg"
-                    alt="RS School"
-                    width="60"
-            /></a>
+            <div class="footer-container">
+                <a href="https://github.com/valeriastav" target="_blank"
+                    ><img src="./assets/svg/github-55.png" alt="github"
+                /></a>
+                <div>© 2023</div>
+                <a href="https://rs.school/js/" target="_blank"
+                    ><img
+                        src="./assets/svg/rs_school_js.svg"
+                        alt="RS School"
+                        width="80"
+                /></a>
+            </div>
         </footer>
         <script src="index.js"></script>
     </body>
