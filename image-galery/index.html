@@ -13,55 +13,39 @@
             src="https://kit.fontawesome.com/625da22935.js"
             crossorigin="anonymous"
         ></script>
-        <title>Image Galery</title>
+        <title>Image Gallery</title>
     </head>
     <body>
         <header class="header">
-            <div class="header-container">
-                <div class="header-title">
-                    <h1>
-                        <i
-                            class="fa-solid fa-camera-retro"
-                            style="color: gold"
-                        ></i>
-                        Unsplash API
-                    </h1>
-                </div>
-                <div class="search-container">
-                    <input
-                        class="search-box"
-                        type="search"
-                        name="search-box"
-                        id="search-box"
-                        placeholder="Search..."
-                        autofocus
-                    />
-                    <i
-                        class="fa-solid fa-magnifying-glass"
-                        style="color: #3b3d3e"
-                    ></i>
-                </div>
+            <div class="header-title">
+                <h1>
+                    <i class="fa-solid fa-photo-film" style="color: gold"></i>
+                    Unsplash API by VS
+                </h1>
+            </div>
+            <div class="search-container">
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    onclick="loadImg()"
+                    style="color: #3b3d3e"
+                ></i>
+                <input
+                    class="search-box"
+                    type="search"
+                    placeholder="Search..."
+                    autofocus
+                />
             </div>
         </header>
         <main class="main">
-            <div class="image-container">
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-            </div>
+            <div class="image-container"></div>
         </main>
         <footer class="footer">
             <div class="footer-container">
                 <a href="https://github.com/valeriastav" target="_blank"
                     ><img src="./assets/svg/github-55.png" alt="github"
                 /></a>
-                <div>© 2023</div>
+                <div class="year">© 2023</div>
                 <a href="https://rs.school/js/" target="_blank"
                     ><img
                         src="./assets/svg/rs_school_js.svg"
