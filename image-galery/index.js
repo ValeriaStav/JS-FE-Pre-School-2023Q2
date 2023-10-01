@@ -17,7 +17,7 @@ function showData() {
         url = `https://api.unsplash.com/search/photos/?query=${search.value}&per_page=30&client_id=QLaJd3l1d-lKaJSxgQODq0fe7fROHCbaDq3XnedeQ8k`;
     } else {
         url =
-            "https://api.unsplash.com/search/photos?query=spring flowers&per_page=30&orientation=landscape&client_id=QLaJd3l1d-lKaJSxgQODq0fe7fROHCbaDq3XnedeQ8k";
+            "https://api.unsplash.com/search/photos?query=sea&per_page=30&orientation=landscape&client_id=QLaJd3l1d-lKaJSxgQODq0fe7fROHCbaDq3XnedeQ8k";
     }
 
     fetch(url)

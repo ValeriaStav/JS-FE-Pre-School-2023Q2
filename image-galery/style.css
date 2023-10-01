@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&family=Open+Sans:ital,wght@0,600;1,500&display=swap');
 
 :root {
-    --background-color: #3b3d3e;
+    --background-color: #002222;
     --border-color: #00e0bb;
     --text-color: linear-gradient(135deg, #fbb01a 0, #ecb70a 6.25%, #dbbe02 12.5%, #c9c409 18.75%, #b6c918 25%, #a2ce29 31.25%, #8cd239 37.5%, #74d54a 43.75%, #55d85b 50%, #20da6d 56.25%, #00dc80 62.5%, #00de93 68.75%, #00dfa7 75%, #00e0bb 81.25%, #00e1ce 87.5%, #00e1e2 93.75%, #00e0f5 100%);
     ;
@@ -21,7 +21,10 @@ body {
     justify-content: space-between;
     background-color: var(--background-color);
     scroll-behavior: smooth;
+}
 
+::-webkit-scrollbar {
+    display: none;
 }
 
 .header {
@@ -36,7 +39,7 @@ body {
     padding: 25px;
     border-bottom: 3px solid transparent;
     background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
-        linear-gradient(to right, darkblue, darkorchid) border-box;
+        linear-gradient(to right, darkorchid, darkblue) border-box;
 }
 
 .header-title {
@@ -160,7 +163,7 @@ main {
         padding: 10px;
         border-top: 3px solid transparent;
         background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
-            linear-gradient(to right, darkblue, darkorchid) border-box;
+            linear-gradient(to right, darkorchid, darkblue) border-box;
         font-family: 'Mooli', sans-serif;
         font-size: 1.2rem;
         font-weight: 600;
