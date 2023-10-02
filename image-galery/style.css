@@ -40,6 +40,7 @@ body {
     border-bottom: 3px solid transparent;
     background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
         linear-gradient(to right, darkorchid, darkblue) border-box;
+    z-index: 1;
 }
 
 .header-title {
@@ -132,6 +133,7 @@ main {
     justify-content: space-evenly;
     align-items: flex-start;
     margin: 0 auto;
+    z-index: -1;
 }
 
 .image {
@@ -147,13 +149,14 @@ main {
         transform: scale(1.05);
         transition: all .5s ease;
         box-shadow: 0 0 50px var(--border-color);
-
     }
 }
 
 .footer {
-    height: 10%;
+    max-height: 10%;
     margin: 0 20px;
+    position: sticky;
+    bottom: 0;
 
     .footer-container {
         height: 100%;
@@ -169,18 +172,18 @@ main {
         font-weight: 600;
         color: var(--text-color);
     }
-}
 
-a:hover {
-    transform: rotateY(360deg) scale(1.1);
-    transition: all 1s ease;
-}
+    a:hover {
+        transform: rotateY(360deg) scale(1.1);
+        transition: all 1s ease;
+    }
 
-.year:hover {
-    &:hover {
-        cursor: default;
-        animation: blur 3s ease;
-        text-shadow: 0 0 5px silver, 0 0 7px silver;
+    .year:hover {
+        &:hover {
+            cursor: default;
+            animation: blur 3s ease;
+            text-shadow: 0 0 5px silver, 0 0 7px silver;
+        }
     }
 }
 
