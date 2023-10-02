@@ -171,19 +171,17 @@ main {
         font-weight: 600;
         color: var(--text-color);
     }
+}
 
-    a:hover {
-        transform: rotateY(360deg) scale(1.1);
-        transition: all 1s ease;
-    }
+a:hover {
+    transform: rotateY(360deg) scale(1.1);
+    transition: all 1s ease;
+}
 
-    .year:hover {
-        &:hover {
-            cursor: default;
-            animation: blur 3s ease;
-            text-shadow: 0 0 5px silver, 0 0 7px silver;
-        }
-    }
+.year:hover {
+    cursor: default;
+    animation: blur 3s ease;
+    text-shadow: 0 0 5px silver, 0 0 7px silver;
 }
 
 @media (max-width: 768px) {
