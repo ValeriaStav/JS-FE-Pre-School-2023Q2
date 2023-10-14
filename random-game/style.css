@@ -1,7 +1,16 @@
 :root {
-    --bg: #696969;
-    --bg-cell: #f2f2f2;
-    --text-color: darkgreen;
+    --bg: #556280;
+    --bg-cell: #E6F2EE;
+    --bg-filled: #b6dfdd;
+    --bg-highlighted: #d2d4f0;
+    --bg-selected: #C3DAAB;
+    --bg-error: #ff8c8c;
+    --bg-win: #b9c406;
+
+    --text-color: #14344A;
+    --text-filled: #605392;
+    --text-error: #fff;
+    --text-win: #fff;
 
     --gap: 0.5vmin;
     --cell-size: 7.5vmin;
@@ -52,7 +61,30 @@ body {
     cursor: pointer;
 }
 
-.numbers {
+.cell.filled {
+    background-color: var(--bg-filled);
+    color: var(--text-filled);
+}
+
+.cell.highlighted {
+    background-color: var(--bg-highlighted);
+}
+
+.cell.selected {
+    background-color: var(--bg-selected);
+}
+
+.cell.error {
+    background-color: var(--bg-error);
+    color: var(--text-error);
+}
+
+.cell.win {
+    background-color: var(--bg-win);
+    color: var(--text-win);
+}
+
+.digits {
     display: grid;
     grid-template-columns: repeat(5, auto);
     gap: var(--gap);
@@ -69,7 +101,7 @@ body {
     margin-bottom: var(--gap);
 }
 
-.number,
+.digit,
 .remove {
     display: flex;
     justify-content: center;
@@ -80,4 +112,39 @@ body {
     font-size: var(--font-size);
     color: var(--text-color);
     cursor: pointer;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(1.2);
+    }
+
+    25% {
+        transform: scale(1.2) rotate(30deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(-30deg);
+    }
+}
+
+.zoom {
+    animation: zoom 0.5s ease-in-out;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 520px) {
+    :root {
+        --cell-size: 10vmin;
+        --font-size: 5.5vmin;
+    }
 }
