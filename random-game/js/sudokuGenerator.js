@@ -93,12 +93,29 @@ function validateBox(grid, row, column, value) {
     return true;
 }
 
-function removeCells(grid) {
-    const DIFFICULTY = 30;
+const difficultyLevelRadios = document.getElementsByTagName("input");
+let difficultyLevel;
+
+function setLevel(e, level) {
+    e.onclick = function () {
+        if (e.checked) {
+            difficultyLevel = level;
+        }
+        return difficultyLevel;
+    };
+    console.log(difficultyLevel);
+}
+
+setLevel(difficultyLevelRadios[0], 80);
+setLevel(difficultyLevelRadios[1], 50);
+setLevel(difficultyLevelRadios[2], 30);
+
+export function removeCells(grid) {
+    const difficulty = 3;
     const resultGrid = [...grid].map((row) => [...row]);
 
     let i = 0;
-    while (i < DIFFICULTY) {
+    while (i < difficulty) {
         const row = Math.floor(Math.random() * GRID_SIZE);
         const column = Math.floor(Math.random() * GRID_SIZE);
         if (resultGrid[row][column] !== null) {

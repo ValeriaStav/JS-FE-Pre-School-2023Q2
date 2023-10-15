@@ -8,6 +8,7 @@
     </head>
     <body>
         <div class="wrapper">
+            <p class="title">Sudoku</p>
             <div class="grid">
                 <div class="cell"></div>
                 <div class="cell"></div>
@@ -91,17 +92,78 @@
                 <div class="cell"></div>
                 <div class="cell"></div>
             </div>
-            <div class="digits">
-                <div class="digit">1</div>
-                <div class="digit">2</div>
-                <div class="digit">3</div>
-                <div class="digit">4</div>
-                <div class="digit">5</div>
-                <div class="digit">6</div>
-                <div class="digit">7</div>
-                <div class="digit">8</div>
-                <div class="digit">9</div>
-                <div class="remove">x</div>
+            <div class="controls-wrapper">
+                <div class="digits">
+                    <div class="digit">1</div>
+                    <div class="digit">2</div>
+                    <div class="digit">3</div>
+                    <div class="digit">4</div>
+                    <div class="digit">5</div>
+                    <div class="digit">6</div>
+                    <div class="digit">7</div>
+                    <div class="digit">8</div>
+                    <div class="digit">9</div>
+                    <div class="remove">x</div>
+                </div>
+                <div class="controls">
+                    <div class="game">New<br />game</div>
+                    <div class="score">Score</div>
+                </div>
+            </div>
+            <div class="newGame">
+                <fieldset class="difficulty">
+                    <legend>Difficulty</legend>
+                    <p>
+                        <label for="easy">Easy:</label>
+                        <input
+                            type="radio"
+                            name="difficulty"
+                            id="easy"
+                            value="easy"
+                        />
+                    </p>
+                    <p>
+                        <label for="medium">Medium:</label>
+                        <input
+                            type="radio"
+                            name="difficulty"
+                            id="medium"
+                            value="medium"
+                            checked="checked"
+                        />
+                    </p>
+                    <p>
+                        <label for="hard">Hard:</label>
+                        <input
+                            type="radio"
+                            name="difficulty"
+                            id="hard"
+                            value="hard"
+                        />
+                    </p>
+                    <button class="newGame-btn" type="submit">OK</button>
+                </fieldset>
+                <div class="modal-menu-overlay overlay-modal-game"></div>
+            </div>
+            <div class="scoreBoard">
+                <fieldset class="score-list">
+                    <legend>Score</legend>
+                    <span>Number of moves: <span id="counter"></span></span>
+
+                    <div class="modal-menu-overlay overlay-modal-score"></div>
+                </fieldset>
+            </div>
+            <div class="footer">
+                <a href="https://github.com/valeriastav" target="_blank"
+                    ><img src="./assets/img/github-55.png" alt="github"
+                /></a>
+                <div class="year">© 2023</div>
+                <a href="https://rs.school/js/" target="_blank"
+                    ><img
+                        src="./assets/img/rs_school_js.svg"
+                        alt="RS School"
+                        width="80"
+                /></a>
             </div>
         </div>
         <script type="module" src="./js/script.js"></script>

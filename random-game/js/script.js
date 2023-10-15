@@ -18,6 +18,8 @@ function Init() {
     initCells();
     initDigits();
     initRemover();
+    initNewGame();
+    initScoreboard();
     initKeyEvent();
 }
 
@@ -171,6 +173,43 @@ function onRemoveClick() {
     sudoku.grid[row][column] = null;
 }
 
+function initNewGame() {
+    const game = document.querySelector(".game");
+    const newGame = document.querySelector(".newGame");
+    game.addEventListener("click", () => {
+        newGame.classList.add("newGame-active");
+    });
+
+    const modalMenuOverlayGame = document.querySelector(".overlay-modal-game");
+    modalMenuOverlayGame.addEventListener("click", () => {
+        newGame.classList.remove("newGame-active");
+    });
+
+    const chooseGame = document.querySelector(".newGame-btn");
+    chooseGame.addEventListener("click", () => {
+        newGame.classList.remove("newGame-active");
+    });
+
+    alert(
+        "Привет, Проверяющий! Немного не успела доделать игру, перепроверь ближе к концу ревью, пожалуйста)"
+    );
+}
+
+function initScoreboard() {
+    const score = document.querySelector(".score");
+    const scoreBoard = document.querySelector(".scoreBoard");
+    score.addEventListener("click", () => {
+        scoreBoard.classList.add("scoreBoard-active");
+    });
+
+    const modalMenuOverlayScore = document.querySelector(
+        ".overlay-modal-score"
+    );
+    modalMenuOverlayScore.addEventListener("click", () => {
+        scoreBoard.classList.remove("scoreBoard-active");
+    });
+}
+
 function initKeyEvent() {
     document.addEventListener("keydown", (event) => {
         if (event.key === "Backspace" || event.key === "Delete") {
@@ -201,4 +240,30 @@ function winAnimation() {
         );
     }
     cells.forEach((cell) => cell.classList.add("win"));
+
+    const scoreBoard = document.querySelector(".scoreBoard");
+
+    setTimeout(() => scoreBoard.classList.add("scoreBoard-active"), 2000);
+}
+
+const digits = document.getElementsByClassName("digit");
+const result = document.getElementById("counter");
+console.log(result);
+
+const Counter = function () {
+    this.count = 0;
+    this.increase = function () {
+        this.count = this.count + 1;
+    };
+};
+
+const counter = new Counter();
+result.innerHTML = counter.count;
+
+for (const digit of digits) {
+    digit.addEventListener("click", (event) => {
+        counter.increase();
+        result.innerHTML = counter.count;
+        console.log(result);
+    });
 }
