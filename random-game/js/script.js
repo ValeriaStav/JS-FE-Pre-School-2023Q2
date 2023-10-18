@@ -18,7 +18,7 @@ function Init() {
     initCells();
     initDigits();
     initRemover();
-    initNewGame();
+    initWinBoard();
     initScoreboard();
     initKeyEvent();
 }
@@ -128,7 +128,9 @@ function onDigitClick(digit) {
     setValueInSelectedCell(digit);
 
     if (!sudoku.hasEmptyCells()) {
-        setTimeout(() => winAnimation(), 500);
+        setTimeout(() => winAnimation(), 700);
+        const winBoard = document.querySelector(".winBoard");
+        setTimeout(() => winBoard.classList.add("winBoard-active"), 2000);
     }
 }
 
@@ -173,33 +175,14 @@ function onRemoveClick() {
     sudoku.grid[row][column] = null;
 }
 
-function initNewGame() {
-    const game = document.querySelector(".game");
-    const newGame = document.querySelector(".newGame");
-    game.addEventListener("click", () => {
-        newGame.classList.add("newGame-active");
-    });
-
-    const modalMenuOverlayGame = document.querySelector(".overlay-modal-game");
-    modalMenuOverlayGame.addEventListener("click", () => {
-        newGame.classList.remove("newGame-active");
-    });
-
-    const chooseGame = document.querySelector(".newGame-btn");
-    chooseGame.addEventListener("click", () => {
-        newGame.classList.remove("newGame-active");
-    });
-
-    alert(
-        "Привет, Проверяющий! Немного не успела доделать игру, перепроверь ближе к концу ревью, пожалуйста)"
-    );
-}
-
 function initScoreboard() {
-    const score = document.querySelector(".score");
+    const scoreBtn = document.querySelector(".score-btn");
     const scoreBoard = document.querySelector(".scoreBoard");
-    score.addEventListener("click", () => {
+    scoreBtn.addEventListener("click", () => {
         scoreBoard.classList.add("scoreBoard-active");
+        score = localStorage.getItem("top10");
+        result1.innerHTML = score;
+        console.log(score);
     });
 
     const modalMenuOverlayScore = document.querySelector(
@@ -207,6 +190,15 @@ function initScoreboard() {
     );
     modalMenuOverlayScore.addEventListener("click", () => {
         scoreBoard.classList.remove("scoreBoard-active");
+    });
+}
+
+function initWinBoard() {
+    const winBoard = document.querySelector(".winBoard");
+    const modalMenuOverlayWin = document.querySelector(".overlay-modal-win");
+    modalMenuOverlayWin.addEventListener("click", () => {
+        winBoard.classList.remove("winBoard-active");
+        setTimeout(() => window.history.go(0), 700);
     });
 }
 
@@ -240,15 +232,13 @@ function winAnimation() {
         );
     }
     cells.forEach((cell) => cell.classList.add("win"));
-
-    const scoreBoard = document.querySelector(".scoreBoard");
-
-    setTimeout(() => scoreBoard.classList.add("scoreBoard-active"), 2000);
 }
 
 const digits = document.getElementsByClassName("digit");
-const result = document.getElementById("counter");
-console.log(result);
+
+const result1 = document.getElementById("scoreItem1");
+const result2 = document.getElementById("scoreItem2");
+console.log(result1, result2);
 
 const Counter = function () {
     this.count = 0;
@@ -258,12 +248,22 @@ const Counter = function () {
 };
 
 const counter = new Counter();
-result.innerHTML = counter.count;
+result1.innerHTML = counter.count;
+result2.innerHTML = counter.count;
+let score;
+
+localStorage.getItem("top10") > 0
+    ? (score = localStorage.getItem("top10"))
+    : (score = 0);
 
 for (const digit of digits) {
-    digit.addEventListener("click", (event) => {
+    digit.addEventListener("click", () => {
         counter.increase();
-        result.innerHTML = counter.count;
-        console.log(result);
+        result1.innerHTML = counter.count;
+        score = result1.innerHTML;
+        result2.innerHTML = counter.count;
+        score = result2.innerHTML;
+        console.log(score);
+        localStorage.setItem("top10", score);
     });
 }

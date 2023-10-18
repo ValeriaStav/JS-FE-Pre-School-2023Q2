@@ -106,8 +106,10 @@
                     <div class="remove">x</div>
                 </div>
                 <div class="controls">
-                    <div class="game">New<br />game</div>
-                    <div class="score">Score</div>
+                    <div class="game" onClick="history.go(0);">
+                        New<br />game
+                    </div>
+                    <div class="score-btn">Score</div>
                 </div>
             </div>
             <div class="newGame">
@@ -141,16 +143,26 @@
                             value="hard"
                         />
                     </p>
-                    <button class="newGame-btn" type="submit">OK</button>
+                    <button class="newGame-btn" type="button">Play</button>
                 </fieldset>
                 <div class="modal-menu-overlay overlay-modal-game"></div>
             </div>
+
             <div class="scoreBoard">
                 <fieldset class="score-list">
-                    <legend>Score</legend>
-                    <span>Number of moves: <span id="counter"></span></span>
-
+                    <legend>HIGH SCORES</legend>
+                    <span>Number of moves: <span id="scoreItem1"></span></span>
                     <div class="modal-menu-overlay overlay-modal-score"></div>
+                </fieldset>
+            </div>
+
+            <div class="winBoard">
+                <fieldset class="congrats">
+                    <legend>CONGRATS!</legend>
+                    <h1>YOU WIN!!!</h1>
+
+                    <span>Your score is: <span id="scoreItem2"></span></span>
+                    <div class="modal-menu-overlay overlay-modal-win"></div>
                 </fieldset>
             </div>
             <div class="footer">

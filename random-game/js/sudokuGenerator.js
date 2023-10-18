@@ -103,7 +103,6 @@ function setLevel(e, level) {
         }
         return difficultyLevel;
     };
-    console.log(difficultyLevel);
 }
 
 setLevel(difficultyLevelRadios[0], 80);
