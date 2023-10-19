@@ -110,11 +110,15 @@ setLevel(difficultyLevelRadios[1], 50);
 setLevel(difficultyLevelRadios[2], 30);
 
 export function removeCells(grid) {
-    const difficulty = 3;
+    // const veryEasy = 1;
+    const easy = 10;
+    // const medium = 31;
+    // const hard = 51;
+
     const resultGrid = [...grid].map((row) => [...row]);
 
     let i = 0;
-    while (i < difficulty) {
+    while (i < easy) {
         const row = Math.floor(Math.random() * GRID_SIZE);
         const column = Math.floor(Math.random() * GRID_SIZE);
         if (resultGrid[row][column] !== null) {
