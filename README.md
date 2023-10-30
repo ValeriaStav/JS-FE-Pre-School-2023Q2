@@ -2,10 +2,10 @@
 
 **Tasks:**
 
-1. [Library](https://rolling-scopes-school.github.io/valeriastav-JSFEPRESCHOOL2023Q2/library/);
+1. [Library](https://valeriastav.github.io/JSFEPRESCHOOL2023Q2/library/);
 
-2. [Audio player](https://rolling-scopes-school.github.io/valeriastav-JSFEPRESCHOOL2023Q2/audio-player/);
+2. [Audio player](https://valeriastav.github.io/JSFEPRESCHOOL2023Q2/audio-player/);
 
-3. [Image gallery](https://rolling-scopes-school.github.io/valeriastav-JSFEPRESCHOOL2023Q2/image-galery/);
+3. [Image gallery](https://valeriastav.github.io/JSFEPRESCHOOL2023Q2/image-galery/);
 
-4. [Random game](https://rolling-scopes-school.github.io/valeriastav-JSFEPRESCHOOL2023Q2/random-game/).
+4. [Random game](https://valeriastav.github.io/JSFEPRESCHOOL2023Q2/random-game/).
