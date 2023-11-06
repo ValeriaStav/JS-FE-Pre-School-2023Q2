@@ -1,4 +1,4 @@
-# RS School (JSFEPRESCHOOL2023Q2)
+# RS School (JS/FE Pre-School 2023Q2)
 
 **Tasks:**
 
